@@ -29,7 +29,7 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     gap: 25px;
-    z-index: 5;
+    z-index: 6; /* Más arriba que la imagen */
 }
 
 /* Botones */
@@ -54,7 +54,7 @@ canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 0; /* Debajo de todo */
 }
 
 /* Imagen central */
@@ -63,13 +63,12 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 3; /* Debe estar encima del canvas */
-    pointer-events: none; /* Para que el mouse pase a los botones */
+    z-index: 5; /* Debajo de los botones, pero encima del canvas */
 }
 
 .center-image img {
-    max-width: 50vw; /* Ajusta el tamaño según quieras */
+    max-width: 50vw;
     max-height: 50vh;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
