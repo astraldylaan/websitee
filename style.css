@@ -56,3 +56,20 @@ canvas {
     left: 0;
     z-index: 0;
 }
+
+/* Imagen central */
+.center-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Debe estar encima del canvas */
+    pointer-events: none; /* Para que el mouse pase a los botones */
+}
+
+.center-image img {
+    max-width: 50vw; /* Ajusta el tamaño según quieras */
+    max-height: 50vh;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
