@@ -21,7 +21,7 @@ body, html {
     border-radius: 10px;
 }
 
-/* Contenedor de botones */
+/* Botones */
 .buttons-container {
     position: fixed;
     bottom: 50px;
@@ -29,10 +29,9 @@ body, html {
     transform: translateX(-50%);
     display: flex;
     gap: 25px;
-    z-index: 6; /* Más arriba que la imagen */
+    z-index: 6;
 }
 
-/* Botones */
 button {
     padding: 15px 30px;
     font-size: 16px;
@@ -49,12 +48,12 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* Canvas de fondo */
+/* Fondo de estrellas */
 canvas {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 0; /* Debajo de todo */
+    z-index: 0;
 }
 
 /* Imagen central */
@@ -63,7 +62,7 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 5; /* Debajo de los botones, pero encima del canvas */
+    z-index: 5;
 }
 
 .center-image img {
@@ -72,3 +71,4 @@ canvas {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255,255,255,0.5);
 }
+
