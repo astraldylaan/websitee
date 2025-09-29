@@ -32,7 +32,6 @@ let w = canvas.width = window.innerWidth;
 let h = canvas.height = window.innerHeight;
 const stars = [];
 
-// Crear estrellas
 for(let i=0; i<250; i++){
     stars.push({
         x: Math.random() * w,
@@ -43,21 +42,18 @@ for(let i=0; i<250; i++){
     });
 }
 
-// Movimiento con el mouse
 window.addEventListener('mousemove', e => {
     const mx = (e.clientX - w/2)/500;
     const my = (e.clientY - h/2)/500;
     stars.forEach(s => { s.dx = mx; s.dy = my; });
 });
 
-// Dibujar estrellas
 function draw(){
     ctx.clearRect(0,0,w,h);
     stars.forEach(s => {
         s.x += s.dx;
         s.y += s.dy;
 
-        // Reaparecer estrellas
         if(s.x > w) s.x = 0;
         if(s.x < 0) s.x = w;
         if(s.y > h) s.y = 0;
@@ -72,7 +68,6 @@ function draw(){
 }
 draw();
 
-// Ajustar tamaño del canvas al cambiar la ventana
 window.addEventListener('resize', () => {
     w = canvas.width = window.innerWidth;
     h = canvas.height = window.innerHeight;
